@@ -1,0 +1,38 @@
+.custom-navbar-bar{
+    height: 2.5rem
+}
+.main-container{
+    height: 94vh;
+}
+.side-section-container{
+    background: #dce7f9;
+    .create-new-btn p{
+        background: rgb(63, 120, 153);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .forms-list{
+        list-style-type: none;
+        li{
+            cursor: pointer;
+        }
+    }
+    .title{
+        font-size:1.5rem;
+        font-weight: 600;
+    }
+}
+.form-group{
+    position: relative;
+    i{
+        position: absolute;
+        left: 97%;
+        cursor: pointer;
+    }
+}
+button{
+    background: #7f96b5;
+    border: none;
+    border-radius: 5px !important;
+    padding-bottom: 4px;
+}

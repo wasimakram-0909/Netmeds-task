@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Routes from './routes/index';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from "react-redux";
+import { store } from "./helpers";
+import "./assets/css/style.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// let env = process.env.NODE_ENV
+
+// if(env !== 'development')
+//     console.log = () => {}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Fragment>
+        <Provider store={store}>
+                <Routes />
+        </Provider>
+    </Fragment>
+,
   document.getElementById('root')
 );
 

@@ -122,7 +122,7 @@ class FormFnc  extends React.Component{
                 </div>
 
                 <div className="col-md-10 border sections m-0 p-0">
-                    {!!this.state.formName ? <FormTemp {...this.state} onChange={this.onChange}  saveForm={this.saveForm} />:<p className="text-center">Create or Select a form</p>}
+                    {!!this.state.formName ? <FormTemp showDelete={false} {...this.state} onChange={this.onChange}  saveForm={this.saveForm} />:<p className="text-center">Create or Select a form</p>}
                 </div>
             </div>
         </>

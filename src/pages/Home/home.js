@@ -195,7 +195,7 @@ class HomePageFnc  extends React.Component{
                 <NewFormModel isOpen={this.state.showNewFormModel} {...this.state} toggle={this.toggleForm} onFieldLabelChange={this.onNewFormNameChange} successBtn = {this.newFormModelAccepted}  />
 
                 <div className="col-md-7 border sections m-0 p-0">
-                    {!!this.state.formName ? <FormTemp {...this.state} onChange={this.onChange} deleteForm={this.deleteForm} saveForm={this.saveForm} deleteField={this.deleteField}/>:<p className="text-center">Create or Select a form</p>}
+                    {!!this.state.formName ? <FormTemp showDelete={true} {...this.state} onChange={this.onChange} deleteForm={this.deleteForm} saveForm={this.saveForm} deleteField={this.deleteField}/>:<p className="text-center">Create or Select a form</p>}
                 </div>
                 <div className="col-md-3 border sections m-0 p-0">
                 {!!this.state.formName ? <FormInputs onClick={this.handleAddNewField}/>:<div className="text-center side-section-container h-100"></div>}

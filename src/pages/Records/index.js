@@ -92,12 +92,9 @@ class RecordsFnc  extends React.Component{
                 <div className="col-md-2 border sections m-0 p-0">
                     <SideSection createNewForm={this.createNewForm} {...this.props} />
                 </div>
-                <ConfirmationModal isOpen={this.state.showModel} {...this.state} toggle={this.toggle} onFieldLabelChange={this.onFieldLabelChange} successBtn = {this.modelAccepted}  />
-
-                <NewFormModel isOpen={this.state.showNewFormModel} {...this.state} toggle={this.toggleForm} onFieldLabelChange={this.onNewFormNameChange} successBtn = {this.newFormModelAccepted}  />
 
                 <div className="col-md-10 border sections m-0 p-0">
-                    {!!this.state.formName ? <FormTemp {...this.state} onChange={this.onChange} deleteForm={this.deleteForm} saveForm={this.saveForm} deleteField={this.deleteField}/>:<p className="text-center">Create or Select a form</p>}
+                    {!!this.state.formName ? <FormTemp {...this.state} showDelete={false} onChange={this.onChange} deleteForm={this.deleteForm} saveForm={this.saveForm} deleteField={this.deleteField}/>:<p className="text-center">Create or Select a form</p>}
                 </div>
             </div>
         </>
